@@ -1,0 +1,142 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right,#24243e 50%,#CFDEF3 50%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+#login{
+    position: relative;
+    overflow: hidden;
+     background: linear-gradient(to right,#24243e 50%,#CFDEF3 50%);
+     width: 800px;
+     height: 500px;
+     box-shadow: 0 4px 8px 0;
+     border-radius: 20px;
+     display: flex;
+}
+#content{  
+    position: absolute;
+    left: 0;
+    
+}
+#login-form{
+    width: 350px;
+    padding-left:50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   transition: transform 0.4s ease;
+   background-color:#24243e ;
+   height: 500px;
+
+}
+#description{
+    left: 50%;
+    position: absolute;
+    background-color: #CFDEF3 ;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+   background-image: url(image/edited_background.png);
+   background-position: center;
+   background-size: contain;
+   background-repeat: no-repeat;
+   height: 500px;
+  transition: transform 0.4s ease;
+}
+#login-para{
+ font-family:" roboto",sans-serif;
+ font-size: 1.8rem;
+ color: white;
+ font-weight: 600;
+}
+input{
+   text-decoration: none;
+   width: 300px;
+   border: none;
+   outline: none;
+   background: transparent;
+    font-family: "roboto",sans-serif;
+   font-size: .9rem;
+   font-weight: 400;
+   caret-color: white;
+   color: #CFDEF3;
+}
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px #24243e inset !important;
+    -webkit-text-fill-color: white !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+hr{
+    width: 80%;
+    margin-left: 0;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+#forget{
+    cursor: pointer;
+}
+#forget:hover{
+    text-decoration: underline;
+}
+
+#login-button{
+    width: 200px;
+    height: 30px;
+   font-weight:800;
+   border-radius: 5px;
+   color: white;
+  background-color: rgb(5, 112, 93);
+    margin-left: 25px;
+    border: none;
+    box-shadow: 0 2px 4px 0 black;
+    cursor: pointer;
+}
+#login-button:hover{
+    background-color: rgb(5, 72, 60);
+}
+#signup{
+    width: 75px;
+    height: 20px;
+    margin-right: 0;
+    margin-left: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 1px 2px 0 black;
+    background-color: #CFDEF3;
+}
+#signup:hover{
+    background-color: #36365c;
+    color: white;
+}
+#welcome{
+    font-family: "roboto",sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #24243e;
+    margin-top: 20px;
+}
+#portal{
+    font-family: "roboto",sans-serif;
+    font-size: 1.4rem;
+    font-weight: 200;
+    color: #24243e;
+}
+.left{
+   transform: translateX(-100%);
+}
+.right{
+   transform: translateX(100%);
+}
+
+
+
+
