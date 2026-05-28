@@ -57,6 +57,23 @@ body{
  color: white;
  font-weight: 600;
 }
+/* Text Gradient CSS */
+#login-para{
+  color: #F0F0F2;
+  background-image: linear-gradient(45deg, #F0F0F2 0.1%, #48707b 15%, #4e6974 10%, #158086 25%, #076985 40%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+#login-para1{
+     color: #F0F0F2;
+  background-image: linear-gradient(45deg, #F0F0F2 0.1%, #48707b 15%, #4e6974 10%, #158086 25%, #056f6c 40%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
 input{
    text-decoration: none;
    width: 300px;
@@ -130,13 +147,32 @@ hr{
     font-weight: 200;
     color: #24243e;
 }
+#welcome{color: #F0F0F2;
+  background-image: linear-gradient(45deg, #F0F0F2 0.1%, #48707b 15%, #4e6974 10%, #158086 25%, #076985 40%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block; 
+}
+#portal{
+  color: #F0F0F2;
+  background-image: linear-gradient(45deg, #F0F0F2 0.1%, #48707b 15%, #4e6974 10%, #158086 25%, #076985 40%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+#portal1{
+    color: #F0F0F2;
+  background-image: linear-gradient(45deg, #F0F0F2 0.1%, #48707b 15%, #4e6974 10%, #158086 25%, #076985 40%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
 .left{
    transform: translateX(-100%);
 }
 .right{
    transform: translateX(100%);
 }
-
-
-
-

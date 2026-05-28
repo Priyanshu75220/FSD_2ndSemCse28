@@ -21,7 +21,7 @@ function change(){
               <button id="login-button" onclick="usercreateAccount()">Create Account</button>
               <br><br>
               <div id="switch">
-               <span id="account-exist-or-not">don't have an account</span>
+               <span id="account-exist-or-not">have an account</span>
               <button id="signup" onclick="change()">Sign in</button>
               </div>
            </div>`;
