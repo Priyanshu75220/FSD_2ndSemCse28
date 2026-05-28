@@ -6,13 +6,26 @@ function App() {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
 
+  const [showName, setShowName] = useState("")
+  const [showEmail, setShowEmail] = useState("")
+  const [showPassword, setShowPassword] = useState("")
+
   function showData() {
 
     if(name === "" || email === "" || password === ""){
       alert("Please Fill All Fields")
     }
     else{
+
+      setShowName(name)
+      setShowEmail(email)
+      setShowPassword(password)
+
       alert("Registration Successful")
+
+      setName("")
+      setEmail("")
+      setPassword("")
     }
   }
 
@@ -22,7 +35,7 @@ function App() {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    fontFamily: "Poppins, sans-serif"
+    fontFamily: "Arial"
   }
 
   const formStyle = {
@@ -34,40 +47,27 @@ function App() {
     textAlign: "center"
   }
 
-  const headingStyle = {
-    color: "#5a189a",
-    marginBottom: "25px",
-    fontSize: "32px"
+  const inputStyle = {
+    width: "90%",
+    padding: "14px",
+    margin: "12px 0",
+    borderRadius: "12px",
+    border: "1px solid #ccc",
+    fontSize: "16px",
+    backgroundColor: "#f1f3f6",
+    color: "#333"
   }
 
-  const inputStyle = {
-  width: "90%",
-  padding: "14px",
-  margin: "12px 0",
-  borderRadius: "12px",
-  border: "1px solid #ccc",
-  outline: "none",
-  fontSize: "16px",
-  backgroundColor: "#f1f3f6",
-  color: "blue"
-}
   const buttonStyle = {
     background: "linear-gradient(to right, #667eea, #764ba2)",
     color: "white",
     border: "none",
-    padding: "14px 30px",
+    padding: "14px",
     borderRadius: "12px",
     fontSize: "18px",
     cursor: "pointer",
-    marginTop: "20px",
     width: "100%",
-    fontWeight: "bold"
-  }
-
-  const textStyle = {
-    color: "#444",
-    textAlign: "left",
-    marginLeft: "15px"
+    marginTop: "15px"
   }
 
   return (
@@ -75,14 +75,15 @@ function App() {
 
       <div style={formStyle}>
 
-        <h1 style={headingStyle}>
-          Register
+        <h1 style={{color:"#5a189a"}}>
+          Registration Form
         </h1>
 
         <input
           type="text"
           placeholder="Enter Your Name"
           style={inputStyle}
+          value={name}
           onChange={(e) => setName(e.target.value)}
         />
 
@@ -90,6 +91,7 @@ function App() {
           type="email"
           placeholder="Enter Your Email"
           style={inputStyle}
+          value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
 
@@ -97,14 +99,9 @@ function App() {
           type="password"
           placeholder="Enter Your Password"
           style={inputStyle}
+          value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-
-        <div style={textStyle}>
-          <p><b>Name:</b> {name}</p>
-          <p><b>Email:</b> {email}</p>
-          <p><b>Password:</b> {password}</p>
-        </div>
 
         <button
           style={buttonStyle}
@@ -112,6 +109,16 @@ function App() {
         >
           Submit
         </button>
+
+        <div style={{marginTop:"20px", textAlign:"left"}}>
+
+          <h3>Submitted Data</h3>
+
+          <p><b>Name:</b> {showName}</p>
+          <p><b>Email:</b> {showEmail}</p>
+          <p><b>Password:</b> {showPassword}</p>
+
+        </div>
 
       </div>
 
