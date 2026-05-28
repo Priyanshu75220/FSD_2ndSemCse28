@@ -4,19 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <input type="text" id="name" placeholder="EmployeeName">
-    <input type="number" id="empId" placeholder="EmployeeId">
-    <input type="number" id="salary" placeholder="Salary">
-    <input type="text" id="dept" placeholder="Department">
-    <button onclick="addEmployee()">Add Empolyee</button>
-    <button onclick="displayEmployees()">Display All</button>
-    <button onclick="filterSalary()">Salary</button>
-    <button onclick="totalSalary">Total Salary</button>
-    <button onclick="averageSalary()">Average Salary</button>
-    <button onclick="countDepartment()">coutn by Department</button>
-    <div id="output"></div>
-    <script src="script.js"></script>
+    <div id="container">
+        <h2>Employees Management System</h2>
+        <div id="inputfill">
+          <input type="text" id="name" placeholder="EmployeeName">
+          <input type="number" id="empId" placeholder="EmployeeId">
+          <input type="number" id="salary" placeholder="Salary">
+          <input type="text" id="dept" placeholder="Department">
+        </div>
+        <div id="allbutton">
+          <button onclick="addEmployee()">Add Empolyee</button>
+          <button onclick="displayEmployees()">Display All</button>
+          <button onclick="filterSalary()">Salary</button>
+          <button onclick="totalSalary()">Total Salary</button>
+          <button onclick="averageSalary()">Average Salary</button>
+          <button onclick="countDepartment()">count by Department</button>
+        </div>
+       <div id="output"></div>
+       <script src="script.js"></script>
+    </div>
 </body>
 </html>
