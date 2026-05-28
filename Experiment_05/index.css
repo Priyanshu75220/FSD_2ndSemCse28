@@ -1,0 +1,85 @@
+body{
+    padding: 0;
+    margin: 0;
+    background: #6bb0b0;
+    background: radial-gradient(circle, rgba(107, 176, 176, 1) 0%, rgba(250, 240, 250, 1) 79%);
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+#container{
+    position: relative;
+    width: 600px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+     background: #6bb0b0;
+    background: radial-gradient(circle, rgba(107, 176, 176, 1) 0%, rgba(250, 240, 250, 1) 79%);
+    box-shadow: 0 4px 8px 0 #6bb0b0;
+    border-radius: 20px;
+    animation-name: Animation;
+    animation-duration: 4s;
+}
+@keyframes Animation {
+    from{transform: rotateY(0);}to{transform:rotateY(-360deg);}
+}
+#inputfill{
+
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+    width: 500px;
+    padding: 20px;
+}
+input{
+    height: 30px;
+    width: auto;
+    outline: 1px solid #6bb0b0;
+    border:1px solid #6bb0b0;
+    border-radius: 5px;
+     background: #6bb0b0;
+    background: radial-gradient(circle, rgba(107, 176, 176, 1) 0%, rgba(250, 240, 250, 1) 79%);
+     box-shadow: 0 2px 4px 0  #6bb0b0;
+}
+input:hover{
+    transform: translateY(-5px);
+}
+#allbutton{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+    padding: 5px;
+}
+button{
+    height: 30px;
+    border-radius: 10px;
+    border: 2px solid  rgb(4, 108, 132);
+    background: #6bb0b0;
+    background: radial-gradient(circle, rgba(107, 176, 176, 1) 0%, rgba(250, 240, 250, 1) 79%);
+    box-shadow: 0 2px 4px 0  #6bb0b0;
+    transition: 200ms ease;
+    cursor: pointer;
+}
+button:hover{
+    transform: translateY(-5px);
+}
+
+h2{
+  color: #d0d7df;
+  background-image: linear-gradient(45deg, #3e689b , #2e9197 50%, #aa83be 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+#output{
+    width: 500px;
+    min-height: 0;
+    border:1px solid #2e9197;
+    border-radius: 10px;
+    text-align: center;
+}
+
