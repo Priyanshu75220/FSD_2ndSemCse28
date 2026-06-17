@@ -1,40 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Website</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+body{
+    background:#f4f6f9;
+    font-family:'Segoe UI',sans-serif;
+}
+
+/* Header */
+header{
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+    color:white;
+    text-align:center;
+    padding:20px;
+    font-size:32px;
+    font-weight:bold;
+    margin:20px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.15);
+}
+
+/* Product Card */
+.product-card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    transition:0.4s;
+}
+
+.product-card:hover{
+    transform:translateY(-10px);
+}
+
+.product-card img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+    transition:0.4s;
+}
+
+.product-card:hover img{
+    transform:scale(1.05);
+}
+
+.card-body{
+    padding:20px;
+    text-align:center;
+}
+
+.card-title{
+    font-size:24px;
+    font-weight:600;
+    margin-bottom:10px;
+}
+
+.card-text{
+    color:#555;
+    margin-bottom:20px;
+}
+
+.btn-custom{
+    background:linear-gradient(135deg,#6366f1,#8b5cf6);
+    color:white;
+    border:none;
+    padding:10px 25px;
+    border-radius:30px;
+    font-weight:500;
+}
+
+.btn-custom:hover{
+    color:white;
+    opacity:0.9;
+}
+
+/* Footer */
+footer{
+    background:#111827;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin:20px;
+    border-radius:15px;
+    font-size:18px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.15);
+}
+</style>
 </head>
+
 <body>
-    <header class="bg-dark  text-center text-white m-3">My Website</header>
-    <div class="container">
-        <div class="row">
-            <div class="col-4">
-                <img src="https://images.pexels.com/photos/6611936/pexels-photo-6611936.jpeg" class="img-fluid " width="200px" height="200" alt=""/>
-               <p>Item 1</p> 
-               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea, quae!</p>
-               <button class="bg-primary" onclick="alert('Product have qood Quality')">View Detailed</button>
+
+<header>
+    My Website
+</header>
+
+<div class="container">
+    <div class="row g-4">
+
+        <!-- Item 1 -->
+        <div class="col-md-4">
+            <div class="product-card">
+                <img src="https://images.pexels.com/photos/6611936/pexels-photo-6611936.jpeg" alt="Item 1">
+
+                <div class="card-body">
+                    <h3 class="card-title">Item 1</h3>
+
+                    <p class="card-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, quae!
+                    </p>
+
+                    <button class="btn btn-custom"
+                        onclick="alert('Product has good quality')">
+                        View Details
+                    </button>
+                </div>
             </div>
-            <div class="col-4">
-                <img src="https://images.pexels.com/photos/6611936/pexels-photo-6611936.jpeg" class="img-fluid " width="200px" height="200" alt=""/>
-               <p>Item 2</p> 
-               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea, quae!</p>
-            <button class="bg-primary" onclick="alert('Product have qood Quality')">View Detailed</button>
         </div>
-             <div class="col-4">
-                <img src="https://images.pexels.com/photos/6611936/pexels-photo-6611936.jpeg" class="img-fluid " width="200px" height="200" alt=""/>
-               <p>Item 3</p> 
-               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea, quae!</p>
-            <button class="bg-primary" onclick="alert('Product have qood Quality')">View Detailed</button>
+
+        <!-- Item 2 -->
+        <div class="col-md-4">
+            <div class="product-card">
+                <img src="https://images.pexels.com/photos/6611936/pexels-photo-6611936.jpeg" alt="Item 2">
+
+                <div class="card-body">
+                    <h3 class="card-title">Item 2</h3>
+
+                    <p class="card-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, quae!
+                    </p>
+
+                    <button class="btn btn-custom"
+                        onclick="alert('Product has good quality')">
+                        View Details
+                    </button>
+                </div>
+            </div>
         </div>
+
+        <!-- Item 3 -->
+        <div class="col-md-4">
+            <div class="product-card">
+                <img src="https://images.pexels.com/photos/6611936/pexels-photo-6611936.jpeg" alt="Item 3">
+
+                <div class="card-body">
+                    <h3 class="card-title">Item 3</h3>
+
+                    <p class="card-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, quae!
+                    </p>
+
+                    <button class="btn btn-custom"
+                        onclick="alert('Product has good quality')">
+                        View Details
+                    </button>
+                </div>
+            </div>
         </div>
+
     </div>
-    <script>
-       // alert("Wecome to my website");
-        //confirm("Press ok for Blank Page");
-        //prompt("please Enter Your Email Id");
-    </script>
-    <footer class="bg-primary text-center text-white m-3">Copy@my website</footer>
+</div>
+
+<footer>
+    Copy@my website
+</footer>
+
 </body>
 </html>
