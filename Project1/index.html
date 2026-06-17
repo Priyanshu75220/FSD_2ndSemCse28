@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Premium Developer Portfolio">
+<title>Priyanshu Maurya | Portfolio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+<div class="loader">
+    <div class="spinner"></div>
+</div>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">Portfolio</div>
+
+        <ul class="nav-links">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Achievements</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="controls">
+            <i class="fas fa-moon" id="themeToggle"></i>
+        </div>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+    <div class="hero-content reveal">
+        <h3>Hello, I'm</h3>
+        <h1>Priyanshu Maurya</h1>
+
+        <h2>
+            <span id="typing"></span>
+        </h2>
+
+        <p>
+            Passionate Full Stack Developer specializing in modern web
+            technologies, responsive design, and problem-solving.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#" class="btn primary">Download Resume</a>
+            <a href="#contact" class="btn secondary">Hire Me</a>
+        </div>
+    </div>
+
+    <div class="hero-image reveal">
+        <img src="image.png"
+        alt="Profile">
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="about reveal">
+    <h2 class="section-title">About Me</h2>
+
+    <div class="glass-card">
+        <p>
+            I am a Computer Science student and passionate developer who
+            enjoys building modern websites and solving coding challenges.
+        </p>
+
+        <h3>Education</h3>
+        <p>B.Tech Computer Science Engineering</p>
+
+        <h3>Career Objective</h3>
+        <p>
+            To become a skilled software engineer and contribute to
+            innovative technology solutions.
+        </p>
+    </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="skills reveal">
+    <h2 class="section-title">Skills</h2>
+
+    <div class="skills-grid">
+
+        <div class="skill-card">HTML5</div>
+        <div class="skill-card">CSS3</div>
+        <div class="skill-card">JavaScript</div>
+        <div class="skill-card">React.js</div>
+        <div class="skill-card">C++</div>
+        <div class="skill-card">Java</div>
+        <div class="skill-card">DSA</div>
+        <div class="skill-card">Problem Solving</div>
+
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="projects reveal">
+    <h2 class="section-title">Projects</h2>
+
+    <div class="project-grid">
+
+        <div class="project-card">
+            <img src="e-commerce.png">
+            <h3>E-Commerce Website</h3>
+            <p>Modern shopping website using React and JavaScript.</p>
+
+            <div class="project-buttons">
+                <a href="#" class="btn small">Live Demo</a>
+                <a href="#" class="btn small">GitHub</a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="portfolio.png">
+            <h3>Portfolio Website</h3>
+            <p>Responsive personal portfolio with animations.</p>
+
+            <div class="project-buttons">
+                <a href="#" class="btn small">Live Demo</a>
+                <a href="#" class="btn small">GitHub</a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="task-manager.png">
+            <h3>Task Manager</h3>
+            <p>Task management application with local storage.</p>
+
+            <div class="project-buttons">
+                <a href="#" class="btn small">Live Demo</a>
+                <a href="#" class="btn small">GitHub</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="experience reveal">
+    <h2 class="section-title">Achievements</h2>
+
+    <div class="glass-card">
+        <ul>
+            <li>Certified Web Developer</li>
+            <li>200+ Coding Problems Solved</li>
+            <li>Frontend Development Projects</li>
+            <li>Hackathon Participation</li>
+        </ul>
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="services reveal">
+    <h2 class="section-title">Services</h2>
+
+    <div class="service-grid">
+
+        <div class="service-card">
+            <i class="fas fa-code"></i>
+            <h3>Web Development</h3>
+        </div>
+
+        <div class="service-card">
+            <i class="fas fa-laptop-code"></i>
+            <h3>Frontend Development</h3>
+        </div>
+
+        <div class="service-card">
+            <i class="fas fa-mobile-screen"></i>
+            <h3>Responsive Design</h3>
+        </div>
+
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact reveal">
+    <h2 class="section-title">Contact Me</h2>
+
+    <div class="contact-container">
+
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Email" required>
+            <textarea rows="6" placeholder="Message"></textarea>
+
+            <button class="btn primary">
+                Send Message
+            </button>
+        </form>
+
+        <div class="contact-info">
+            <p><i class="fas fa-envelope"></i> yourmail@gmail.com</p>
+            <p><i class="fas fa-phone"></i> +91 9876543210</p>
+            <p><i class="fas fa-location-dot"></i> Ghaziabad, India</p>
+
+            <div class="socials">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Priyanshu Maurya. All Rights Reserved.</p>
+</footer>
+
+<script src="javascript.js"></script>
+
+</body>
+</html>
