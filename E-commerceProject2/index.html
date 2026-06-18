@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ShopLux - Discover Your Perfect Style</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="#" onclick="showPage('home')">
+      <div class="brand-icon">✨</div>
+      <span>ShopLux</span>
+    </a>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav me-auto ms-4 gap-1">
+        <li class="nav-item"><a class="nav-link" href="#" onclick="showPage('home')">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#" onclick="showPage('products')">Products</a></li>
+        <li class="nav-item"><a class="nav-link" href="#categories" onclick="showPage('home')">Categories</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Deals</a></li>
+      </ul>
+      <div class="search-wrapper me-3 d-none d-lg-block" style="width:240px">
+        <i class="bi bi-search"></i>
+        <input type="text" class="form-control search-input" placeholder="Search products..." oninput="filterSearch(this.value)" />
+      </div>
+      <div class="d-flex align-items-center gap-1">
+        <button class="icon-btn d-none d-sm-flex"><i class="bi bi-heart"></i></button>
+        <button class="icon-btn d-none d-sm-flex"><i class="bi bi-person"></i></button>
+        <button class="icon-btn" onclick="showPage('cart')">
+          <i class="bi bi-bag"></i>
+          <span class="cart-badge" id="cartBadge" style="display:none">0</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- HOME PAGE -->
+<div id="page-home" class="page-section active">
+  <section class="hero-section">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <div class="hero-badge"><i class="bi bi-lightning-fill"></i> New Spring Collection 2026</div>
+          <h1 class="hero-title">Discover Your<br/>Perfect Style</h1>
+          <p class="text-muted mb-4 fs-5" style="max-width:480px">Explore our curated collection of premium products. From cutting-edge electronics to timeless fashion.</p>
+          <div class="d-flex flex-wrap gap-3">
+            <button class="btn btn-gradient" onclick="showPage('products')">Shop Now <i class="bi bi-arrow-right ms-1"></i></button>
+            <button class="btn btn-outline-brand">View Deals</button>
+          </div>
+        </div>
+        <div class="col-lg-6 d-none d-lg-block position-relative">
+          <div class="blob blob-1"></div>
+          <div class="blob blob-2"></div>
+          <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=700&h=500&fit=crop&auto=format" alt="Fashion Shopping" class="hero-image" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="features-bar">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-6 col-md-3"><div class="feature-card"><div class="feature-icon"><i class="bi bi-truck"></i></div><strong class="d-block mb-1">Free Shipping</strong><small class="text-muted">On orders over $50</small></div></div>
+        <div class="col-6 col-md-3"><div class="feature-card"><div class="feature-icon"><i class="bi bi-shield-check"></i></div><strong class="d-block mb-1">Secure Payment</strong><small class="text-muted">100% protected</small></div></div>
+        <div class="col-6 col-md-3"><div class="feature-card"><div class="feature-icon"><i class="bi bi-gift"></i></div><strong class="d-block mb-1">Gift Cards</strong><small class="text-muted">Perfect gift idea</small></div></div>
+        <div class="col-6 col-md-3"><div class="feature-card"><div class="feature-icon"><i class="bi bi-lightning"></i></div><strong class="d-block mb-1">Fast Delivery</strong><small class="text-muted">2–3 days shipping</small></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-5 mt-2" id="categories">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Shop by Category</h2>
+        <p class="text-muted">Browse through our diverse range of categories</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-6 col-md-3"><button class="category-card" onclick="filterCategory('Electronics')"><span class="cat-emoji">⚡</span><span class="cat-name">Electronics</span></button></div>
+        <div class="col-6 col-md-3"><button class="category-card" onclick="filterCategory('Fashion')"><span class="cat-emoji">👔</span><span class="cat-name">Fashion</span></button></div>
+        <div class="col-6 col-md-3"><button class="category-card" onclick="filterCategory('Accessories')"><span class="cat-emoji">👜</span><span class="cat-name">Accessories</span></button></div>
+        <div class="col-6 col-md-3"><button class="category-card" onclick="filterCategory('Home &amp; Living')"><span class="cat-emoji">🏠</span><span class="cat-name">Home &amp; Living</span></button></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-5">
+    <div class="container">
+      <div class="d-flex align-items-center justify-content-between mb-5">
+        <div><h2 class="section-title mb-1">Featured Products</h2><p class="text-muted mb-0">Handpicked items just for you</p></div>
+        <a href="#" class="text-decoration-none d-none d-md-flex align-items-center gap-1" style="color:#7c3aed" onclick="showPage('products')">View All <i class="bi bi-arrow-right"></i></a>
+      </div>
+      <div class="row g-4" id="featuredGrid"></div>
+    </div>
+  </section>
+
+  <section class="py-5">
+    <div class="container">
+      <div class="cta-banner">
+        <h2 class="fw-bold mb-3" style="font-size:clamp(1.5rem,3vw,2.2rem)">Get 20% Off Your First Order</h2>
+        <p class="mb-4" style="color:rgba(255,255,255,.85);max-width:520px;margin:0 auto 1.5rem">Sign up for our newsletter and receive exclusive deals and early access to new products.</p>
+        <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center" style="max-width:440px;margin:0 auto">
+          <input type="email" class="cta-input flex-grow-1" placeholder="Enter your email" />
+          <button class="btn-cta-sub">Subscribe</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- PRODUCTS PAGE -->
+<div id="page-products" class="page-section">
+  <div style="background:var(--gradient-hero);padding:4rem 0;color:#fff">
+    <div class="container"><h1 class="fw-bold mb-2">All Products</h1><p style="color:rgba(255,255,255,.8)">Discover our complete collection of premium products</p></div>
+  </div>
+  <div class="container py-5">
+    <div class="d-flex flex-column flex-md-row gap-4 mb-5 align-items-md-center">
+      <div class="flex-grow-1">
+        <small class="text-muted d-flex align-items-center gap-1 mb-2"><i class="bi bi-sliders" style="color:#7c3aed"></i> Categories</small>
+        <div class="d-flex flex-wrap gap-2" id="categoryChips"></div>
+      </div>
+      <div style="min-width:180px">
+        <small class="text-muted d-block mb-2">Sort By</small>
+        <select class="sort-select w-100" id="sortSelect" onchange="renderProductsPage()">
+          <option value="featured">Featured</option>
+          <option value="price-low">Price: Low to High</option>
+          <option value="price-high">Price: High to Low</option>
+          <option value="rating">Highest Rated</option>
+        </select>
+      </div>
+    </div>
+    <p class="text-muted mb-4">Showing <span style="color:#7c3aed" id="productCount">0</span> products</p>
+    <div class="row g-4" id="productsGrid"></div>
+    <div id="emptyState" class="text-center py-5 d-none">
+      <div class="mx-auto mb-4 d-flex align-items-center justify-content-center" style="width:80px;height:80px;background:linear-gradient(135deg,#ede9fe,#fce7f3);border-radius:50%;font-size:2rem">🔍</div>
+      <h4>No products found</h4><p class="text-muted">Try selecting a different category</p>
+    </div>
+  </div>
+</div>
+
+<!-- CART PAGE -->
+<div id="page-cart" class="page-section">
+  <div class="container py-5">
+    <div id="emptyCart" class="d-none text-center" style="min-height:60vh;display:flex!important;align-items:center;justify-content:center;flex-direction:column">
+      <div class="mx-auto mb-4 d-flex align-items-center justify-content-center" style="width:120px;height:120px;background:linear-gradient(135deg,#ede9fe,#fce7f3);border-radius:50%"><i class="bi bi-bag" style="font-size:3rem;color:#7c3aed"></i></div>
+      <h3 class="mb-3">Your cart is empty</h3>
+      <p class="text-muted mb-4">Looks like you haven't added anything to your cart yet</p>
+      <button class="btn btn-gradient" onclick="showPage('products')">Start Shopping <i class="bi bi-arrow-right ms-1"></i></button>
+    </div>
+    <div id="cartContent">
+      <div class="mb-5"><h2 class="section-title mb-1">Shopping Cart</h2><p class="text-muted" id="cartItemCount"></p></div>
+      <div class="row g-5">
+        <div class="col-lg-8"><div id="cartItemsList" class="d-flex flex-column gap-3"></div></div>
+        <div class="col-lg-4">
+          <div class="bg-white rounded-4 shadow p-4 sticky-top" style="top:90px">
+            <h5 class="fw-bold mb-4">Order Summary</h5>
+            <div class="d-flex justify-content-between mb-3"><span class="text-muted">Subtotal</span><span id="summarySubtotal">$0.00</span></div>
+            <div class="d-flex justify-content-between mb-3"><span class="text-muted">Shipping</span><span id="summaryShipping">$0.00</span></div>
+            <div class="d-flex justify-content-between mb-3"><span class="text-muted">Tax (10%)</span><span id="summaryTax">$0.00</span></div>
+            <div id="freeShippingNote" class="d-none rounded-3 p-3 mb-3" style="background:#f3f0ff;border:1px solid #ddd6fe"><small style="color:#7c3aed">💫 Add <strong id="shippingDiff"></strong> more for FREE shipping!</small></div>
+            <hr />
+            <div class="d-flex justify-content-between align-items-center mb-4"><strong>Total</strong><span class="section-title" style="font-size:1.5rem" id="summaryTotal">$0.00</span></div>
+            <button class="btn btn-gradient w-100 mb-3">Proceed to Checkout</button>
+            <a href="#" class="d-block text-center text-decoration-none" style="color:#7c3aed" onclick="showPage('products')">Continue Shopping</a>
+            <div class="border-top pt-3 mt-3 d-flex align-items-center justify-content-center gap-2">
+              <div class="d-flex align-items-center justify-content-center rounded-circle" style="width:20px;height:20px;background:#d1fae5;color:#059669;font-size:.7rem">✓</div>
+              <small class="text-muted">Secure Checkout</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="py-5">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-12 col-md-4">
+        <div class="d-flex align-items-center gap-2 mb-3"><div class="brand-icon" style="background:rgba(255,255,255,.2)">✨</div><span class="fw-bold fs-5">ShopLux</span></div>
+        <p class="footer-muted small mb-4">Your destination for premium products and exceptional shopping experiences.</p>
+        <div class="d-flex gap-2">
+          <a href="#" class="social-btn"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="social-btn"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" class="social-btn"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="social-btn"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+      <div class="col-6 col-md-2"><h6 class="fw-bold mb-3">Shop</h6><ul class="list-unstyled small footer-muted"><li class="mb-2"><a href="#">New Arrivals</a></li><li class="mb-2"><a href="#">Best Sellers</a></li><li class="mb-2"><a href="#">Sale</a></li><li class="mb-2"><a href="#">Gift Cards</a></li></ul></div>
+      <div class="col-6 col-md-2"><h6 class="fw-bold mb-3">Support</h6><ul class="list-unstyled small footer-muted"><li class="mb-2"><a href="#">Contact Us</a></li><li class="mb-2"><a href="#">Shipping Info</a></li><li class="mb-2"><a href="#">Returns</a></li><li class="mb-2"><a href="#">FAQ</a></li></ul></div>
+      <div class="col-12 col-md-4">
+        <h6 class="fw-bold mb-3">Newsletter</h6>
+        <p class="footer-muted small mb-3">Subscribe to get special offers and updates</p>
+        <div class="d-flex"><input type="email" placeholder="Your email" style="flex:1;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);color:#fff;outline:none;padding:.5rem .75rem;border-radius:8px 0 0 8px" /><button class="btn-cta-sub" style="border-radius:0 8px 8px 0;padding:.5rem 1rem">Go</button></div>
+      </div>
+    </div>
+    <hr style="border-color:rgba(255,255,255,.1);margin-top:3rem" />
+    <p class="text-center footer-muted small mb-0">&copy; 2026 ShopLux. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Cart Toast -->
+<div class="cart-toast" id="cartToast">
+  <div class="toast-icon"><i class="bi bi-check2"></i></div>
+  <div><strong class="d-block" style="font-size:.9rem">Added to cart!</strong><small class="text-muted" id="toastProductName"></small></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="javascript.js"></script>
+</body>
+</html>
